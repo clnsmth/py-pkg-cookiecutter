@@ -11,9 +11,15 @@ A personalized Python package [cookiecutter](https://cookiecutter.readthedocs.io
 
 ## Usage
 
-At the command line run:
+Initialize the package:
 ```
 cookiecutter https://github.com/clnsmth/py-pkg-cookiecutter.git
+```
+
+Create a conda environment for the package and activate:
+```
+conda create --name <pkg_name> python=<min_py_vers> -y
+conda actiate <pkg_name>
 ```
 
 Add development dependencies:
@@ -28,6 +34,12 @@ poetry add –-dev pylint
 poetry add –-dev black
 poetry add –-dev nbqa
 ```
+
+Add other dependencies:
+```
+poetry add <dependency>
+```
+
 ## Acknowledgements
 
 This repository is a refactored version of the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
