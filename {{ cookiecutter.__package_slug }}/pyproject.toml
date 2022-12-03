@@ -2,8 +2,8 @@
 name = "{{ cookiecutter.__package_slug }}"
 version = "{{ cookiecutter.package_version }}"
 description = "{{ cookiecutter.package_short_description }}"
-authors = [{ name="Colin Smith", email="colin.smith@wisc.edu" }]
-maintainers = [{ name="Colin Smith", email="colin.smith@wisc.edu" }]
+authors = ["Colin Smith <colin.smith@wisc.edu>"]
+maintainers = ["Colin Smith <colin.smith@wisc.edu>"]
 license = "{{ cookiecutter.open_source_license }}"
 readme = "README.md"
 
