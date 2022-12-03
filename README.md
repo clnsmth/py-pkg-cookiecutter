@@ -1,6 +1,6 @@
 # py-pkg-cookiecutter
 
-A Python package [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) defaulting to my preferences.
+A personalized Python package [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)
 
 ## System setup
 
