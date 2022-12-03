@@ -13,7 +13,7 @@ A personalized Python package [cookiecutter](https://cookiecutter.readthedocs.io
 
 At the command line run:
 ```
-cookiecutter https://github.com/clnsmth/py-pkgs-cookiecutter.git
+cookiecutter https://github.com/clnsmth/py-pkg-cookiecutter.git
 ```
 
 Add development dependencies:
