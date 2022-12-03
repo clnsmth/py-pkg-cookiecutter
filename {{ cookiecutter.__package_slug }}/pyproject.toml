@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "{{ cookiecutter.__package_slug }}"
-version = "{{ cookiecutter.package_version }}"
+version = "0.0.0"
 description = "{{ cookiecutter.package_short_description }}"
 authors = ["Colin Smith <colin.smith@wisc.edu>"]
 maintainers = ["Colin Smith <colin.smith@wisc.edu>"]
