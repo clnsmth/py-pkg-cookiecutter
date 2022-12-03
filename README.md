@@ -28,3 +28,6 @@ poetry add –-dev pylint
 poetry add –-dev black
 poetry add –-dev nbqa
 ```
+## Acknowledgements
+
+This repository is a refactored version of the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
