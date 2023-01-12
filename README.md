@@ -25,13 +25,13 @@ conda actiate <pkg_name>
 Add development dependencies:
 ```
 # Frequently used
-poetry add group --dev pytest pytest-cov sphinx-autoapi sphinx-rtd-theme pylint black
+poetry add --group dev pytest pytest-cov sphinx-autoapi sphinx-rtd-theme pylint black
 
 # Semantic release (if not using semantic release, then remove the related line from CONTRIBUTING.md)
 poetry add --dev python-semantic-release
 
 # Notebooks
-poetry add group --dev jupyter myst-nb nbqa
+poetry add --group dev jupyter myst-nb nbqa
 ```
 
 Add other dependencies:
