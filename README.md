@@ -28,7 +28,7 @@ Add development dependencies:
 poetry add --group dev pytest pytest-cov sphinx-autoapi sphinx-rtd-theme pylint black
 
 # Semantic release (if not using semantic release, then remove the related line from CONTRIBUTING.md)
-poetry add --dev python-semantic-release
+poetry add --group dev python-semantic-release
 
 # Notebooks
 poetry add --group dev jupyter myst-nb nbqa
