@@ -19,7 +19,7 @@ cookiecutter https://github.com/clnsmth/py-pkg-cookiecutter.git
 Create a conda environment for the package and activate:
 ```
 conda create --name <pkg_name> python=<min_py_vers> -y
-conda actiate <pkg_name>
+conda activate <pkg_name>
 ```
 
 Add development dependencies:
