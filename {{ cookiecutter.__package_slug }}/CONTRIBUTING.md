@@ -1,10 +1,10 @@
 # Contributing to {{ cookiecutter.__package_slug }}
 
-The goal of {{ cookiecutter.__package_slug }} is to ... We welcome community contributions to the work. Every little bit helps, and credit will always be given.
+The goal of {{ cookiecutter.__package_slug }} is to ... We welcome community contributions to the work.
 
 ## Development and Release Process
 
-The `main` branch always reflects the current stable release, a `development` branch is used for merging finished features, which are integrated via `feature` branches. Feature branches are named with the corresponding issue # and a short description (e.g., `30-release-workflow`). Once a feature passes review, it is squashed with a commit message following the Angular commit style, and is merged into `development`. `development` is reviewed before each release, and upon approval is merged into `main`. Merges to `main` kick-off a GitHub Action workflow in which Python Semantic Release bumps the version number, tags the release, and builds the changelog. Additionally, the workflow updates the package documentation, creates a downloadable release on GitHub, and archives it with Zenodo.
+The `main` branch always reflects the current stable release, a `development` branch is used for merging features, and `feature` branches are used for creating changes. Feature branches are named with the corresponding issue # and a short description (e.g., `30-release-workflow`). Once a feature passes review, it's commit history is squashed and commit title is added following the Angular commit style, along with reference to the issue it closes. The feature is then merged into `development`. `development` is reviewed before each release, and upon approval is merged into `main`. Merges to `main` kick-off a GitHub Action workflow in which Python Semantic Release bumps the version number, tags the release, and builds the changelog. Additionally, the workflow updates the package documentation, creates a downloadable release on GitHub, and archives it with Zenodo.
 
 ## Types of Contributions
 
