@@ -2,6 +2,10 @@
 
 {{ cookiecutter.package_short_description }}
 
+## Context
+
+- TODO
+
 ## Installation
 
 ```bash
