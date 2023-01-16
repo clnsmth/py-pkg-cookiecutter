@@ -80,4 +80,4 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.__package_slug }}` fo
 
 ## Code of Conduct
 
-Please note that the `{{ cookiecutter.__package_slug }}` project is released with a Code of Conduct. By contributing to this project you agree to abide by its terms.
+Please note that the `{{ cookiecutter.__package_slug }}` project is released with a [Code of Conduct](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/blob/main/CONDUCT.md). By contributing to this project you agree to abide by its terms.
