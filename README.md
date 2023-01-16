@@ -39,6 +39,8 @@ Add other dependencies:
 poetry add <dependency>
 ```
 
+Update CONTRIBUTING.md with the project goals/scope.
+
 ## Acknowledgements
 
 This repository is a refactored version of the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
