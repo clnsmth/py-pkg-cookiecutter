@@ -39,7 +39,9 @@ Add other dependencies:
 poetry add <dependency>
 ```
 
-Update CONTRIBUTING.md with the project goals/scope.
+Update "TODO" prompts in:
+- README.md
+- CONTRIBUTING.md
 
 ## Acknowledgements
 
