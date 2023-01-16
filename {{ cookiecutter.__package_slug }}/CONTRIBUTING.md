@@ -1,6 +1,8 @@
 # Contributing to {{ cookiecutter.__package_slug }}
 
-The goal of {{ cookiecutter.__package_slug }} is to ... We welcome community contributions to the work.
+TODO: The goal of {{ cookiecutter.__package_slug }} is to ...
+
+We welcome community contributions to the work.
 
 ## Development and Release Process
 
