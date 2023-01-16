@@ -10,20 +10,11 @@ The `main` branch always reflects the current stable release, a `development` br
 
 ### Report Bugs
 
-If you are reporting a bug, please open an issue and include:
-
-* Your {{ cookiecutter.__package_slug }} version.
-* Your operating system name and version.
-* Any details about your local setup that might be helpful in troubleshooting.
-* Detailed steps to reproduce the bug.
+Bug reports are always appreciated. If you are reporting a bug, please use the "Bug report" issue template.
 
 ### Propose Features
 
-If you are proposing a feature, open an issue and include:
-
-* Description of the current behavior.
-* Explanation of the new behavior, in as much detail as possible.
-* Solution or next steps.
+If you are proposing a feature, please use the "Feature request" issue template.
 
 ### Fix Bugs
 
