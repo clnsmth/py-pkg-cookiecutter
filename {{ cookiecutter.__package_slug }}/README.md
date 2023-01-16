@@ -6,19 +6,21 @@
 
 {{ cookiecutter.package_short_description }}
 
-## Context
+_TODO: Describe the context/motivation for this package._
 
-- TODO
+## Quick Start
 
-## Installation
+Install the current release from GitHub.
 
 ```bash
 pip install git+https://github.com/clnsmth/{{ cookiecutter.__package_slug }}.git#egg={{ cookiecutter.__package_slug }}
 ```
 
-## Usage
+_TODO: Include brief demonstration of how to use this package._
 
-- TODO
+## Documentation
+
+The official documentation is hosted on ReadTheDocs: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}
 
 ## Contributing
 
