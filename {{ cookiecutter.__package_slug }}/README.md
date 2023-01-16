@@ -6,7 +6,7 @@
 
 {{ cookiecutter.package_short_description }}
 
-_TODO: Describe the context/motivation for this package._
+TODO: Describe the context/motivation for this package.
 
 ## Quick Start
 
@@ -16,7 +16,7 @@ Install the current release from GitHub.
 pip install git+https://github.com/clnsmth/{{ cookiecutter.__package_slug }}.git#egg={{ cookiecutter.__package_slug }}
 ```
 
-_TODO: Include brief demonstration of how to use this package._
+TODO: Include brief demonstration of how to use this package.
 
 ## Documentation
 
