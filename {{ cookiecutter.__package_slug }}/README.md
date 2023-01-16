@@ -20,7 +20,7 @@ _TODO: Include brief demonstration of how to use this package._
 
 ## Documentation
 
-The official documentation is hosted on ReadTheDocs: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}
+The package documentation is hosted on ReadTheDocs: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}
 
 ## Contributing
 
