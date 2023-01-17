@@ -37,7 +37,7 @@ This repository is structured as a standard Python package following the convent
 
 ## Git Commit Guidelines
 
-This project uses Python Semantic Release to streamline the deployment process. As a consequence, the Angular commit style is required. For guidance, see: https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping.
+This project uses Python Semantic Release to streamline the deployment process. As a consequence, the Angular commit style is required. For guidance, [see here](https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping).
 
 ## Testing
 
