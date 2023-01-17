@@ -1,8 +1,8 @@
+# {{ cookiecutter.__package_slug }}
+
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Actions Status: CI/CD]([https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/workflows/ci-cd/badge.svg)](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/actions/workflows/ci-cd.yml](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/actions/workflows/ci-cd.yml))
 [![codecov.io](https://codecov.io/gh/clnsmth/{{ cookiecutter.__package_slug }}/branch/main/graph/badge.svg)](https://codecov.io/github/clnsmth/{{ cookiecutter.__package_slug }}?branch=main)
-
-# {{ cookiecutter.__package_slug }}
 
 {{ cookiecutter.package_short_description }}
 
