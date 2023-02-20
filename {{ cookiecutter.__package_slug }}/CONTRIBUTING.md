@@ -6,7 +6,7 @@ We welcome community contributions to the work.
 
 ## Development and Release Process
 
-The `main` branch always reflects the current stable release, a `development` branch is used for merging features, and `feature` branches create changes. Feature branches are named with the corresponding issue # and a short description (e.g., `30-release-workflow`). Once a feature passes review, it's commit history is squashed and commit title, following the Angular commit style, is added along with reference to the issue it closes. The feature is merged into `development`. `development` is reviewed before each release, and upon approval is merged into `main`. Merges to `main` kick-off a GitHub Action workflow in which Python Semantic Release bumps the version number, tags the release, and builds the changelog. Additionally, the workflow updates package documentation, creates a downloadable release on GitHub, and archives it with Zenodo.
+The `main` branch always reflects the current stable release, a `development` branch is used for merging features, and `feature` branches create changes. Feature branches are named with the corresponding issue # and a short description (e.g., `30-release-workflow`). Once a feature passes review, it's commit history is squashed and commit title, following the [Angular commit style](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format), is added along with reference to the issue it closes. The feature is merged into `development`. `development` is reviewed before each release, and upon approval is merged into `main`. Merges to `main` kick-off a GitHub Action workflow in which Python Semantic Release bumps the version number, tags the release, and builds the changelog. Additionally, the workflow updates package documentation, creates a downloadable release on GitHub, and archives it with Zenodo.
 
 ## Types of Contributions
 
@@ -37,7 +37,7 @@ This repository is structured as a standard Python package following the convent
 
 ## Git Commit Guidelines
 
-This project uses Python Semantic Release to streamline the deployment process. As a consequence, the Angular commit style is required. For guidance, [see here](https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping).
+This project uses Python Semantic Release to streamline the deployment process. As a consequence, the [Angular commit style](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format) is required.
 
 ## Testing
 
