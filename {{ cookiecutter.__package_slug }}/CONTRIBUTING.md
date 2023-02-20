@@ -37,7 +37,9 @@ This repository is structured as a standard Python package following the convent
 
 ## Git Commit Guidelines
 
-This project uses Python Semantic Release to streamline the deployment process. As a consequence, the [Angular commit style](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format) is required.
+This project uses Python Semantic Release to streamline the deployment process. As a consequence, the [Angular commit style](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format) is required. 
+
+Issues corresponding to a commit should be referenced at the end of the commit message title line. For example, `feat: Add framework for new feature (#3, #5)`. This provides readers helpful context for interpreting the changelog.
 
 ## Testing
 
