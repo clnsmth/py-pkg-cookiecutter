@@ -7,6 +7,21 @@ on:
       - development
 
 jobs:
+
+  lint:
+    # Enforce code style where it matters and fail if issues are found.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psf/black@stable
+        with:
+          jupyter: true
+          src: ./src
+      - uses: psf/black@stable
+        with:
+          jupyter: true
+          src: ./tests
+
   ci:
     # Set up operating system
     runs-on: ubuntu-latest
