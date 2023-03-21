@@ -8,50 +8,56 @@ on:
 
 jobs:
 
-  lint:
-    # Enforce code style where it matters and fail if issues are found.
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: psf/black@stable
-        with:
-          jupyter: true
-          src: ./src
-      - uses: psf/black@stable
-        with:
-          jupyter: true
-          src: ./tests
-
   ci:
     # Set up operating system
     runs-on: ubuntu-latest
 
     # Define job steps
     steps:
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "{{ cookiecutter.python_version }}"
+      # Set up job requirements
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Check-out repository
+      uses: actions/checkout@v2
+    - name: Install poetry
+      uses: snok/install-poetry@v1
+    - name: Install package
+      run: poetry install
 
-      - name: Check-out repository
-        uses: actions/checkout@v2
+      # Format code and error on issues. This is an easy check to pass.
+    - uses: psf/black@stable
+      with:
+        jupyter: true
+        src: ./src
+    - uses: psf/black@stable
+      with:
+        jupyter: true
+        src: ./tests
 
-      - name: Install poetry
-        uses: snok/install-poetry@v1
+      # Analyze code but don't error on issues. This check encourages best
+      # practices and offers flexibility in adoption.
+    - name: Install poetry
+      uses: snok/install-poetry@v1
+    - name: Install package
+      run: poetry install
+    - name: Analyze code with pylint
+      run: |
+        poetry run pylint src/ --exit-zero --disable=C0103
+        poetry run pylint tests/ --exit-zero --disable=C0103
 
-      - name: Install package
-        run: poetry install
+    # Test
+    - name: Test with pytest
+      run: poetry run pytest tests/ --cov=semantics --cov-report=xml
+    - name: Use Codecov to track coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./coverage.xml   # coverage report
 
-      - name: Test with pytest
-        run: poetry run pytest tests/ --cov={{ cookiecutter.__package_slug }} --cov-report=xml
-
-      - name: Use Codecov to track coverage
-        uses: codecov/codecov-action@v2
-        with:
-          files: ./coverage.xml   # coverage report
-
-      - name: Build documentation
-        run: poetry run make html --directory docs/
+    # Build docs
+    - name: Build documentation
+      run: poetry run make html --directory docs/
 
   cd:
     # Only run this job if the "ci" job passes
