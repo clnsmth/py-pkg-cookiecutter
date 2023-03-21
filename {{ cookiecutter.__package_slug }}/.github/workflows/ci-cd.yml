@@ -47,7 +47,7 @@ jobs:
         poetry run pylint src/ --exit-zero --disable=C0103
         poetry run pylint tests/ --exit-zero --disable=C0103
 
-    # Test
+      # Test
     - name: Test with pytest
       run: poetry run pytest tests/ --cov=semantics --cov-report=xml
     - name: Use Codecov to track coverage
@@ -55,7 +55,7 @@ jobs:
       with:
         files: ./coverage.xml   # coverage report
 
-    # Build docs
+      # Build docs
     - name: Build documentation
       run: poetry run make html --directory docs/
 
