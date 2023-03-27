@@ -49,7 +49,7 @@ This package uses GitHub Actions continuous testing mechanism to ensure that the
 
 ## Style and Formatting
 
-This project uses [Black](https://black.readthedocs.io/en/stable/) for code formatting, [Pylint](https://pylint.pycqa.org/en/latest/) for static code analysis, and [NumPy](https://numpydoc.readthedocs.io/en/latest/format.html#style-guide) conventions for docstrings.
+This project uses [Black](https://black.readthedocs.io/en/stable/) for code formatting, [Pylint](https://pylint.pycqa.org/en/latest/) for static code analysis, and [NumPy](https://numpydoc.readthedocs.io/en/latest/format.html#style-guide) conventions for docstrings. Black is strictly enforced by the CI/CD GitHub Action Workflow but Pylint is not.
 
 ## Pull Request Guidelines
 
