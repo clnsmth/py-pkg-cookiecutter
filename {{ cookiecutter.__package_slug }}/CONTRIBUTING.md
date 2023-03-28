@@ -59,6 +59,10 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated.
 3. The pull request should be made to the `development` branch.
 
+Notes for project maintainers:
+- Pull requests should be reviewed for use of the [Angular commit style](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format). If styling is absent, it can be added by the maintainer as a summarizing commit title of the squash and merge option.
+- Pull requests should always be rebased and merged (preferably) or squashed and merged onto the development branch to preserve a linear commit history and to make commit messages, in the [Angular commit style](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format), actionable by the semantic release process.
+
 ## Get Started!
 
 Ready to contribute? Here's how to set up `{{ cookiecutter.__package_slug }}` for local development.
