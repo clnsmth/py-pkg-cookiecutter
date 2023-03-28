@@ -39,6 +39,9 @@ Add other dependencies:
 poetry add <dependency>
 ```
 
+GitHub settings:
+- Pull Requests: [Disable merge commits](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-merging-for-pull-requests) to encourage a linear commit history.
+
 Update "TODO" prompts in:
 - README.md
 - CONTRIBUTING.md
