@@ -1,1 +1,5 @@
-from {{ cookiecutter.__package_slug }} import {{ cookiecutter.__package_slug }}
+import {{ cookiecutter.__package_slug }}
+
+
+def test_test():
+    assert 1 == 1
