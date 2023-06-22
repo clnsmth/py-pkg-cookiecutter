@@ -45,6 +45,7 @@ Git:
 
 GitHub:
 - Initialize a new repository for the project.
+- Grant GitHub Actions write permissions to enable merge of releases back into the development branch, which prevents possible downstream merge conflicts. Select `Settings > Actions > General > Workflow permissions > Read and write permissions`.
 - Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
 - Pull Requests: [Disable merge commits](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-merging-for-pull-requests) to encourage a linear commit history.
 
