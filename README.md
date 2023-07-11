@@ -27,7 +27,7 @@ poetry add --group dev pytest pytest-cov sphinx sphinx-autoapi sphinx-rtd-theme 
 poetry add <dependency>
 ```
 
-Add Conda environment and package dependencies
+Add Conda environment and package dependencies:
 ```
 # Create a conda environment for the package to run in and activate it
 conda create --name <pkg_name> python=<min_py_vers> -y
