@@ -52,6 +52,12 @@ Update "TODO" prompts in the newly initialized package. These placeholders are r
 - Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
 - Enable branch protection rules following: TODO: Add reference to steps within this package
 
+## Read the Docs
+
+- [Importing the project to Read the Docs](https://docs.readthedocs.io/en/stable/tutorial/index.html#importing-the-project-to-read-the-docs)
+- [Checking the first build](https://docs.readthedocs.io/en/stable/tutorial/index.html#checking-the-first-build)
+- [Trigger a build from a pull request](https://docs.readthedocs.io/en/stable/tutorial/index.html#trigger-a-build-from-a-pull-request)
+
 ## Package Logo
 If you would like to add a logo to your package:
 - Add a .png image with the file name `project-sidebar.png` to the /docs/_static directory. Be sure to compress the image.
