@@ -37,19 +37,15 @@ conda activate <pkg_name>
 conda install <dependency>
 ```
 
-Git:
-- Initialize the directory as a git repository.
-- Create a development branch from main.
+Update "TODO" prompts in the newly initialized package. These placeholders are reminders to fill in some basic package details. Search the project for "TODO" to find these. 
 
-GitHub:
-- Initialize a new repository for the project.
-- Grant GitHub Actions write permissions to enable merge of releases back into the development branch, which prevents possible downstream merge conflicts. Select `Settings > Actions > General > Workflow permissions > Read and write permissions`.
+Git and GitHub:
+- Initialize the local directory as a git repository.
+- Create a development branch off of main.
+- Initialize a new GitHub repository for the project.
+- Grant GitHub Actions write permissions to enable merge of releases back into the development branch, which prevents possible downstream merge conflicts. Select `Settings > Actions > General > Workflow permissions > Read and write permissions`. Create a personal access token and add it to the GitHub repository as a secret with the name `RELEASE_TOKEN`.
 - Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
-- Pull Requests: [Disable merge commits](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-merging-for-pull-requests) to encourage a linear commit history.
-
-Update "TODO" prompts in:
-- README.md
-- CONTRIBUTING.md
+- Enable branch protection rules following: TODO: Add reference to steps within this package
 
 ## Acknowledgements
 
