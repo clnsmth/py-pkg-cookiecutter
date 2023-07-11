@@ -16,7 +16,7 @@ Initialize the package:
 cookiecutter https://github.com/clnsmth/py-pkg-cookiecutter.git
 ```
 
-## Dependency and Environment Set-up
+## Dependency and Environment Setup
 
 Add package dependencies via Poetry and Conda. We use Poetry to fulfill package metadata requirements and use Conda to create an operational environment for the package to operate it (we prefer Conda). This means package dependencies must be maintained in two places. An update to one means an update to the other.
 
