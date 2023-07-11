@@ -58,9 +58,9 @@ If you would like to add a logo to your package:
 - Uncomment the block of HTML at the top of the `sidebarintro.html` that enables display of the logo and at line ~154 in `index.html`.
 - Commit the changes.
 
+## PyPI
 
-
-  
+If releasing on PyPI, uncomment the ~lines 25 in `sidebarintro.html` and `sidebarlogo.html`. You may need to update the links contained therein.
 
 ## Acknowledgements
 
