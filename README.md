@@ -25,7 +25,7 @@ conda activate <pkg_name>
 Add development dependencies:
 ```
 # Frequently used
-poetry add --group dev pytest pytest-cov sphinx-autoapi sphinx-rtd-theme myst-nb pylint black 
+poetry add --group dev pytest pytest-cov sphinx sphinx-autoapi sphinx-rtd-theme myst-nb pylint black 
 
 # Semantic release (if not using semantic release, then remove the related line from CONTRIBUTING.md)
 poetry add --group dev python-semantic-release
