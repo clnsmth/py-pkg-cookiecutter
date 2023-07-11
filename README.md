@@ -55,8 +55,10 @@ Update "TODO" prompts in the newly initialized package. These placeholders are r
 ## Package Logo
 If you would like to add a logo to your package:
 - Add a .png image with the file name `project-sidebar.png` to the /docs/_static directory. Be sure to compress the image.
-- Uncomment the block of HTML at the top of the `sidebarintro.html` that enables display of the logo.
+- Uncomment the block of HTML at the top of the `sidebarintro.html` that enables display of the logo and at line ~154 in `index.html`.
 - Commit the changes.
+
+
 
   
 
