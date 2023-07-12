@@ -1,14 +1,16 @@
 # {{ cookiecutter.__package_slug }}
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-[![Actions Status: CI/CD]([https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/workflows/ci-cd/badge.svg)](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/actions/workflows/ci-cd.yml](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/actions/workflows/ci-cd.yml))
+![example workflow](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/actions/workflows/ci-cd.yml/badge.svg)
 [![codecov.io](https://codecov.io/gh/clnsmth/{{ cookiecutter.__package_slug }}/branch/main/graph/badge.svg)](https://codecov.io/github/clnsmth/{{ cookiecutter.__package_slug }}?branch=main)
 
 {{ cookiecutter.package_short_description }}
 
-TODO: Describe the context/motivation for this package.
+[TODO: Describe what this package does and the motivation for it.]
 
-## Quick Start
+[TODO: Include brief demonstration of how to use this package.]
+
+## Installation
 
 Install the current release from GitHub.
 
@@ -16,16 +18,7 @@ Install the current release from GitHub.
 pip install git+https://github.com/clnsmth/{{ cookiecutter.__package_slug }}.git#egg={{ cookiecutter.__package_slug }}
 ```
 
-TODO: Include brief demonstration of how to use this package.
+## API Reference and User Guide
 
-## Documentation
+The API reference and user guide are available on [Read the Docs](https://{{ cookiecutter.__package_slug }}.readthedocs.io).
 
-The package documentation is hosted on ReadTheDocs: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}
-
-## Contributing
-
-Interested in contributing? Check out the [contributing guidelines](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/blob/main/CONTRIBUTING.md). Please note that this project is released with a [Code of Conduct](https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/blob/main/CONDUCT.md). By contributing to this project, you agree to abide by its terms.
-
-## License
-
-`{{ cookiecutter.__package_slug }}` was created by Colin Smith. {% if cookiecutter.open_source_license != 'None' -%}It is licensed under the terms of the {{ cookiecutter.open_source_license }} license.{% else %}Colin Smith retains all rights to the source and it may not be reproduced, distributed, or used to create derivative works.{% endif %}

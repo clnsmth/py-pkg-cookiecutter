@@ -1,14 +1,15 @@
-# Required
 version: 2
 
-# Image to use
 build:
-  image: testing
+  os: "ubuntu-22.04"
+  tools:
+    python: "{{ cookiecutter.python_version }}"
 
-# Configuration
+sphinx:
+  fail_on_warning: false
+
 python:
-  version: {{cookiecutter.python_version}}
+  # Install our python package before building the docs
   install:
-    - requirements: docs/requirements.txt
     - method: pip
       path: .
