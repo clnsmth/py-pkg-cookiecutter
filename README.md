@@ -60,8 +60,16 @@ Update "TODO" prompts in the newly initialized package. These placeholders are r
 
 ## Package Logo
 If you would like to add a logo to your package:
-- Add a .png image with the file name `project-sidebar.png` to the /docs/_static directory. Be sure to compress the image.
-- Uncomment the block of HTML at the top of the `sidebarintro.html` that enables display of the logo and at line ~154 in `index.html`.
+- Add a .png image with the file name `project-sidebar.png` to the `docs/_static/` directory. Please compress the image before adding it.
+- Add the following block of HTML to the top of the file `docs/source/_templates/sidebarintro.html`:
+```
+<!--Display the project logo at the top of the sidebar-->
+<p class="logo">
+  <a href="{{ pathto(master_doc) }}">
+    <img class="logo" src="{{ pathto('_static/project-sidebar.png', 1) }}" alt="Project logo" />
+  </a>
+</p>
+```
 - Commit the changes.
 
 ## PyPI
