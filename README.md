@@ -16,6 +16,15 @@ Initialize the package:
 cookiecutter https://github.com/clnsmth/py-pkg-cookiecutter.git
 ```
 
+## Initialize Conda Environment
+
+```
+# Create a conda environment for the package to run in and activate it
+conda create --name <pkg_name> python=<min_py_vers> -y
+conda activate <pkg_name>
+```
+
+
 ## Dependency and Environment Setup
 
 Add package dependencies via Poetry and Conda. We use Poetry to fulfill package metadata requirements and use Conda to create an operational environment for the package to operate it (we prefer Conda). This means package dependencies must be maintained in two places. An update to one means an update to the other.
@@ -29,12 +38,8 @@ poetry add --group dev pytest pytest-cov sphinx sphinx-autoapi sphinx-rtd-theme 
 poetry add <dependency>
 ```
 
-Add Conda environment and package dependencies:
+Add Conda package dependencies Conda environment:
 ```
-# Create a conda environment for the package to run in and activate it
-conda create --name <pkg_name> python=<min_py_vers> -y
-conda activate <pkg_name>
-
 # Add the same operational dependencies as done for poetry above
 conda install <dependency>
 ```
