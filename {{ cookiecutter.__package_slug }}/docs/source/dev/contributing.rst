@@ -97,7 +97,7 @@ Bug reports play a crucial role in our project! However, before submitting a bug
 If you are reporting a bug, please use the `Bug report`_ issue template. We appreciate it!
 
 .. _Bug report: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/issues/new/choose
-.. _GitHub issues: https://github.com/clnsmth/clnsmth-py311/issues
+.. _GitHub issues: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/issues
 
 Feature Requests
 ----------------
@@ -106,7 +106,7 @@ Feature requests help our project grow with the user community. If you have an i
 
 If you are proposing a feature, please use the `Feature request`_ issue template. Thanks!
 
-.. _Feature request: https://github.com/clnsmth/clnsmth-py311/issues/new/choose
+.. _Feature request: https://github.com/clnsmth/{{ cookiecutter.__package_slug }}/issues/new/choose
 
 .. _commit-message:
 
