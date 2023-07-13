@@ -54,13 +54,13 @@ Update "TODO" prompts in the newly initialized package. These placeholders are r
 - Create a development branch off of main.
 - Initialize a new GitHub repository for the project.
 - Grant GitHub Actions write permissions to enable merge of releases back into the development branch, which prevents possible downstream merge conflicts. Select `Settings > Actions > General > Workflow permissions > Read and write permissions`. Create a personal access token and add it to the GitHub repository as a secret with the name `RELEASE_TOKEN`.
-- Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
 - Enable the following branch protection rules:
   - Require a pull request approval before merging
   - Require status checks to pass before merging
   - Require branches to be up to date before merging
   - Require conversation resolution before merging
   - Require linear history
+- Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
 
 ## Read the Docs
 
