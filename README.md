@@ -44,6 +44,16 @@ Add Conda package dependencies Conda environment:
 conda install <dependency>
 ```
 
+Export Conda environment files and pip requirements:
+```
+# Conda
+conda env export --from-history --file environment-min.yml
+conda env export --no-builds --file environment.yml
+
+# pip
+pip list --format=freeze > requirements.txt
+```
+
 ## TODOs
 
 Update "TODO" prompts in the newly initialized package. These placeholders are reminders to fill in some basic package details. Search the project for "TODO" to find these. 
