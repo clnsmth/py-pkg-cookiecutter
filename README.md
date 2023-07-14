@@ -65,13 +65,14 @@ Update "TODO" prompts in the newly initialized package. These placeholders are r
 - Initialize a new GitHub repository for the project.
 - Grant GitHub Actions write permissions to enable merge of releases back into the development branch, which prevents possible downstream merge conflicts. Select `Settings > Actions > General > Workflow permissions > Read and write permissions`. Create a personal access token and add it to the GitHub repository as a secret with the name `RELEASE_TOKEN`.
 - Disable `Allow merge commits` and `Allow rebase merging` options on Pull Requests.
+- Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
+- Add the short package description to the repository's "About" section of GitHub.
 - Enable the following branch protection rules on both the `main` and `development` branches:
   - Require a pull request approval before merging
   - Require status checks to pass before merging
   - Require branches to be up to date before merging
   - Require conversation resolution before merging
   - Require linear history
-- Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
 
 ## Documentation
 
@@ -90,7 +91,7 @@ make --directory=docs/ clean html
 - [Importing the project to Read the Docs](https://docs.readthedocs.io/en/stable/tutorial/index.html#importing-the-project-to-read-the-docs)
 - [Checking the first build](https://docs.readthedocs.io/en/stable/tutorial/index.html#checking-the-first-build)
 - [Trigger a build from a pull request](https://docs.readthedocs.io/en/stable/tutorial/index.html#trigger-a-build-from-a-pull-request)
-
+- Link to the Read the Docs page in the repository's "About" section of GitHub.
 ## Package Logo
 
 If you would like to add a logo to your package:
