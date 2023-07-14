@@ -82,7 +82,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-#        token: ${{ secrets.RELEASE_TOKEN }}
+        token: {% raw %}${{ secrets.RELEASE_TOKEN }}{% endraw %}
 
     - name: Install poetry
       uses: snok/install-poetry@v1
