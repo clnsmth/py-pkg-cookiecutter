@@ -58,18 +58,6 @@ pip list --format=freeze > requirements.txt
 
 Update "TODO" prompts in the newly initialized package. These placeholders are reminders to fill in some basic package details. Search the project for "TODO" to find these. 
 
-## Documentation
-
-Build the documentation and give it a quick look over for correctness.
-
-```
-# Install the package w/Poetry so Sphinx can run
-poetry install
-
-# From the project root directory
-make --directory=docs/ clean html
-```
-
 ## Git and GitHub
 
 - Initialize the local directory as a git repository.
@@ -83,6 +71,18 @@ make --directory=docs/ clean html
   - Require conversation resolution before merging
   - Require linear history
 - Push the local repository to the remote (make sure the development branch is pushed, otherwise the CD pipeline will fail).
+
+## Documentation
+
+Build the documentation and give it a quick look over for correctness.
+
+```
+# Install the package w/Poetry so Sphinx can run
+poetry install
+
+# From the project root directory
+make --directory=docs/ clean html
+```
 
 ## Read the Docs
 
