@@ -58,6 +58,18 @@ pip list --format=freeze > requirements.txt
 
 Update "TODO" prompts in the newly initialized package. These placeholders are reminders to fill in some basic package details. Search the project for "TODO" to find these. 
 
+## Documentation
+
+Build the documentation and give it a quick look over for correctness.
+
+```
+# Install the package w/Poetry so Sphinx can run
+poetry install
+
+# From the project root directory
+make --directory=docs/ clean html
+```
+
 ## Git and GitHub
 
 - Initialize the local directory as a git repository.
