@@ -19,5 +19,4 @@ def hello_world(message, emphasize):
     """
     if emphasize:
         return message + "!"
-    else:
-        return message
+    return message
