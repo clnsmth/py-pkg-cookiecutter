@@ -1,3 +1,5 @@
+"""For testing the {{ cookiecutter.__package_slug }} module."""
+
 import pytest
 from src.{{ cookiecutter.__package_slug }}.{{ cookiecutter.__package_slug }} import hello_world
 
