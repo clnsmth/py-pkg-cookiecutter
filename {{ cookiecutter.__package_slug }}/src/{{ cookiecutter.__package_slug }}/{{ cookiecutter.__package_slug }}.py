@@ -1,3 +1,5 @@
+"""For {{ cookiecutter.__package_slug }} related operations."""
+
 def hello_world(message, emphasize):
     """Prints a message to the world!
 
