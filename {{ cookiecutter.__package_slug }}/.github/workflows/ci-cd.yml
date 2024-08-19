@@ -32,10 +32,12 @@ jobs:
       with:
         jupyter: true
         src: ./src
+        version: "23.7.0"
     - uses: psf/black@stable
       with:
         jupyter: true
         src: ./tests
+        version: "23.7.0"
 
       # Analyze code but don't error on issues. This check encourages best
       # practices and offers flexibility in adoption.
@@ -45,16 +47,16 @@ jobs:
       run: poetry install
     - name: Analyze code with pylint
       run: |
-        poetry run pylint src/ --exit-zero --disable=C0103
-        poetry run pylint tests/ --exit-zero --disable=C0103
+        poetry run pylint src/ --exit-zero --disable=C0103,W0621,R0904
+        poetry run pylint tests/ --exit-zero --disable=C0103,W0621,R0904
 
     # Test
     - name: Test with pytest
       run: poetry run pytest tests/ --cov={{ cookiecutter.__package_slug }} --cov-report=xml
-    - name: Use Codecov to track coverage
-      uses: codecov/codecov-action@v3
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
       with:
-        files: ./coverage.xml   # coverage report
+        token: ${{ secrets.CODECOV_TOKEN }}
 
     # Build docs
     - name: Build documentation
@@ -92,7 +94,7 @@ jobs:
 
     - name: Use Python Semantic Release to prepare release
       env:
-        GH_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -106,7 +108,7 @@ jobs:
 #         uses: pypa/gh-action-pypi-publish@release/v1
 #         with:
 #           user: __token__
-#           password: {% raw %}${{ secrets.TEST_PYPI_API_TOKEN }}{% endraw %}
+#           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
 #           repository_url: https://test.pypi.org/legacy/
 
 #       - name: Test install from TestPyPI
@@ -114,10 +116,10 @@ jobs:
 #             pip install \
 #             --index-url https://test.pypi.org/simple/ \
 #             --extra-index-url https://pypi.org/simple \
-#             {{ cookiecutter.__package_slug }}
+#             soso
 
 #       - name: Publish to PyPI
 #         uses: pypa/gh-action-pypi-publish@release/v1
 #         with:
 #           user: __token__
-#           password: {% raw %}${{ secrets.PYPI_API_TOKEN }}{% endraw %}
+#           password: ${{ secrets.PYPI_API_TOKEN }}
