@@ -3,27 +3,25 @@
 Contributor's Guide
 ===================
 
-Welcome to our open source project! If you're reading this, it's likely because you're interested in contributing, and we sincerely appreciate your support! Open source projects thrive with the valuable contributions from individuals like you, and we're grateful for your consideration.
+Welcome to the open source community building this toolkit! We're thrilled you're interested in contributing – your ideas and efforts are what make this project thrive.
 
-This document provides guidelines for contributing to our project. To get started, we recommend reading this guide to familiarize yourself with our collaborative process. If you have any questions, feel free to reach out to our primary maintainer: `Colin Smith`_.
-
-.. _Colin Smith: https://github.com/clnsmth
+We encourage you to explore the guide and familiarize yourself with our collaborative development process. If you have any questions or need help getting started, feel free to reach out on our `GitHub issue`_ tracker.
 
 Be Courteous
 ------------
 
 In the spirit of collaboration, we emphasize the importance of maintaining a respectful and inclusive environment.
 
-In our project, we uphold a golden rule that applies to all forms of contribution, including bug reports and feature requests: treat everyone involved with respect. We value the diverse perspectives and experiences of our contributors and encourage constructive and courteous interactions.
+In this project, we uphold a golden rule that applies to all forms of contribution, including bug reports and feature requests: treat everyone involved with respect. We value the diverse perspectives and experiences of our contributors and encourage constructive and courteous interactions.
 
-See our :ref:`Code of Conduct <conduct>` for details.
+See the :ref:`Code of Conduct <conduct>` for details.
 
 .. _Code of Conduct: https://{{ cookiecutter.__package_slug }}.readthedocs.io/en/latest/dev/conduct/
 
 Contribution Suitability
 ------------------------
 
-The final decision regarding the suitability of a contribution for the project rests with our project maintainers. While we carefully consider all contributions, there may be instances where certain contributions are not aligned with the project's current goals or needs, and as a result, they may be declined.
+The final decision regarding the suitability of a contribution for the project rests with the project maintainers. While we carefully consider all contributions, there may be instances where certain contributions are not aligned with the project's current goals or needs, and as a result, they may be declined.
 
 Need some feedback on whether your idea is suitable for the project? Open a `GitHub issue`_. We're happy to discuss your ideas and provide feedback!
 
@@ -31,6 +29,8 @@ Need some feedback on whether your idea is suitable for the project? Open a `Git
 
 Code Contributions
 ------------------
+
+Thinking about adding support for a new metadata standard?  The section titled :ref:`setting-up-a-new-metadata-conversion-strategy` provides a step-by-step guide.
 
 Steps for Submitting Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,9 +40,9 @@ Here are a sequence of steps to help with your code contribution:
 1. Fork the project repository on GitHub.
 2. Create a `feature branch` from the `development` branch.
 3. Install the package by running ``poetry install`` at the command line.
-4. Verify that all tests pass on your system by running ``pytest src/`` at the command line. In case of failures, conduct a thorough investigation. If you require assistance in diagnosing the issue, follow the guidelines for filing :ref:`bug-reports`.
+4. Verify that all tests pass on your system by running ``poetry run pytest`` at the command line. In case of failures, conduct a thorough investigation. If you require assistance in diagnosing the issue, follow the guidelines for filing :ref:`bug-reports`.
 5. Construct test cases that effectively illustrate the bug or feature.
-6. Implement your changes, including any relevant documentation updates following the `NumPy`_ convention for docstrings.
+6. Implement your changes, including any relevant documentation updates following our :ref:`documentation-contributions` guidelines.
 7. Re-run the complete test suite to ensure the success of all tests.
 8. Format and analyze your code according to our :ref:`code-format-and-analysis` guidelines.
 9. Ensure the docs build following the :ref:`documentation-contributions` guidelines.
@@ -50,9 +50,9 @@ Here are a sequence of steps to help with your code contribution:
 11. Commit your work following our :ref:`commit-message` guidelines.
 12. Submit a GitHub Pull Request to the `development` branch of the upstream repository.
 
-.. _NumPy: https://numpydoc.readthedocs.io/en/latest/format.html#style-guide
+.. _reStructuredText: https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html
 .. _pytest: https://docs.pytest.org/en/latest/
-.. _Angular commit style: https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format
+.. _Angular commit style: https://github.com/angular/angular/blob/convert/CONTRIBUTING.md#-commit-message-format
 
 Code Review
 ~~~~~~~~~~~
@@ -67,8 +67,8 @@ Code Format and Analysis
 Our project uses a couple tools to ensure the code base has a consistent
 style and format as it grows. We use `Black`_ for code formatting and `Pylint`_ for static code analysis. Both can be run from the command line::
 
-    black src/ tests/
-    pylint src/ tests/ --disable=C0103,W0621
+    poetry run black src/ tests/
+    poetry run pylint src/ tests/
 
 .. _Black: https://black.readthedocs.io/en/stable/
 .. _Pylint: https://pylint.pycqa.org/en/latest/
@@ -78,21 +78,23 @@ style and format as it grows. We use `Black`_ for code formatting and `Pylint`_ 
 Documentation Contributions
 ---------------------------
 
-We greatly appreciate any efforts to enhance our documentation! The documentation files reside within the ``docs/`` directory and are written in `reStructuredText`_. We utilize `Sphinx`_ to generate a comprehensive suite of documentation. The API documentation is automatically generated by Sphinx from `NumPy`_ formatted docstrings.
+We greatly appreciate any efforts to enhance the project documentation! The documentation files reside within the ``docs/`` directory and are written in `reStructuredText`_. We utilize `Sphinx`_ to generate a comprehensive suite of documentation. The API documentation is automatically generated by Sphinx from docstrings formatted according to `PEP 287`_.
 
 Build the docs from the command line::
 
-    make --directory=docs clean html
+    poetry run make --directory=docs clean html
 
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
+
+.. _reStructuredText: https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html
 .. _Sphinx: http://sphinx-doc.org/index.html
+.. _PEP 287: https://peps.python.org/pep-0287/
 
 .. _bug-reports:
 
 Bug Reports
 -----------
 
-Bug reports play a crucial role in our project! However, before submitting a bug report, we kindly request you to check the existing `GitHub issues`_ to ensure that the bug hasn't been reported before.
+We value your help in improving this project! To avoid duplicate reports, it's helpful to quickly check the existing `GitHub issues`_  to see if the bug has already been reported.
 
 If you are reporting a bug, please use the `Bug report`_ issue template. We appreciate it!
 
@@ -102,7 +104,7 @@ If you are reporting a bug, please use the `Bug report`_ issue template. We appr
 Feature Requests
 ----------------
 
-Feature requests help our project grow with the user community. If you have an idea for a new feature, we'd love to hear about it! Before submitting a feature request, we kindly request you to check the existing `GitHub issues`_ to ensure that the feature hasn't been requested.
+Feature requests help this project grow with the user community. If you have an idea for a new feature, we'd love to hear about it! Before submitting a feature request, we kindly request you to check the existing `GitHub issues`_ to ensure that the feature hasn't been requested.
 
 If you are proposing a feature, please use the `Feature request`_ issue template. Thanks!
 
@@ -113,6 +115,6 @@ If you are proposing a feature, please use the `Feature request`_ issue template
 Commit Messages
 ---------------
 
-Commit messages are incredibly valuable for understanding our project's code. When crafting your commit message, please provide context about the changes being made and the reasons behind the chosen implementation.
+Commit messages are incredibly valuable for understanding the project's code. When crafting your commit message, please provide context about the changes being made and the reasons behind them.
 
 To ensure readability, we recommend to keep the commit message header under 52 characters and the body within 72 characters.

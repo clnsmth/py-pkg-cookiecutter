@@ -5,19 +5,19 @@ Maintainers Guide
 
 Many thanks for your help maintaining our project! Without your contribution, development would be considerably slower and the user community left waiting longer.
 
-This document complements the `Contributor's Guide <contributing.html>`_ by providing additional steps for integrating contributions into our project's code base. As a maintainer, you are also a contributor, so please use the contributor guide when making changes in order to keep the development process open and consistent (note :ref:`developing-features-as-a-maintainer`).
+This document complements the `Contributor's Guide <contributing.html>`_ by providing additional steps for integrating contributions into the project's code base. As a maintainer, you are also a contributor, so please use the contributor guide when making changes in order to keep the development process open and consistent (note :ref:`developing-features-as-a-maintainer`).
 
 Be Courteous
 ------------
 
-Sometimes we need to meet contributors halfway. This means more work on our part but for benefit of our project and community. Please be courteous and patient.
+Sometimes we need to meet contributors halfway. This means more work on our part but for benefit of the project and community. Please be courteous and patient.
 
 If you are unable to respond fully to a pull request or issue in a timely manner, please let the contributor know that you will get to it as soon as you can.
 
 Pull Request Review
 -------------------
 
-Pull request review facilitates refinement of a contribution before it's incorporated into the project. The main goals are to ensure the contribution is consistent with the project's design, is well-documented, and is well-tested. We are not looking for perfection, but rather that the contribution does what it is intended to do.
+Pull request review facilitates refinement of a contribution before it's incorporated into the project. The goals are to ensure the contribution is consistent with the project's design, is well-documented, and is well-tested. We are not looking for perfection, but rather that the contribution does what it is intended to do.
 
 *Though pull request review is required by the project's GitHub branch protection rules, maintainers are allowed to bypass review. Having said this, we generally encourage review in all cases.*
 
@@ -44,7 +44,7 @@ We use a combination of git and GitHub features to version control and manage va
 Commit Message Style
 ~~~~~~~~~~~~~~~~~~~~
 
-Our project uses two different commit message styles. The first is used during feature development (see the Contributor's Guide :ref:`commit-message`). The second is used to create a squash commit when merging a `feature branch` into `development`, and allows `Python Semantic Release`_ to streamline the reoccurring release process.
+Our project uses two different commit message styles. The first is used during feature development (see the Contributor's Guide :ref:`commit-message`). The second is used to convert a squash commit when merging a `feature branch` into `development`, and allows `Python Semantic Release`_ to streamline the reoccurring release process.
 
 This second commit style is the `Angular commit style`_. Our project uses this style in full with the notable exceptions that the `commit message header`_ should not include the `scope` value, and that any related GitHub issues should be referenced. For example:
 
@@ -55,7 +55,7 @@ not
 ``feat(module): add framework for new feature``
 
 .. _Python Semantic Release: https://python-semantic-release.readthedocs.io/en/latest/
-.. _Angular commit style: https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format
+.. _Angular commit style: https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit
 .. _commit message header: https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit-message-header
 
 Do your best to keep the commit message header from exceeding 52 characters in length, but no greater than 72 characters, and keep the commit message body from exceeding 72 characters.
@@ -93,11 +93,9 @@ When a feature is complete and ready for integration with the project, it should
     iii. Add keywords in the `commit message footer`_ to close out or mention any related GitHub issues.
     iv. Merge the pull request.
 
-.. _commit message footer: https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit-message-footer
+.. _commit message footer: https://github.com/angular/angular/blob/convert/CONTRIBUTING.md#commit-message-footer
 
 If at this point, part of the feature was forgotten, don't restore the `feature branch`, rather open a new pull request on `development`, and iterate back through the contributor process.
-
-.. _merging-development-into-main:
 
 Merging Development into Main
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -158,7 +156,7 @@ CI Workflow
 The CI workflow is run on each pull request and push to the `development` and `main` branches. It performs the following steps:
 
 1. Formats code in *src/* and *tests/* using `Black`_. This check is strictly enforced and will fail the workflow.
-2. Analyzes code in *src/* and *tests/* using our project's `Pylint`_ configuration (see :ref:`code-format-and-analysis`). This check is not strictly enforced and will not fail the workflow. However, generally, Pylint recommendations should be followed.
+2. Analyzes code in *src/* and *tests/* using the project's `Pylint`_ configuration (see :ref:`code-format-and-analysis`). This check is not strictly enforced and will not fail the workflow. However, generally, Pylint recommendations should be followed.
 3. Runs tests in *tests/* using `Pytest`_. This check is strictly enforced and will fail the workflow.
 4. Builds the documentation (see :ref:`documentation-contributions`). This check is strictly enforced and will fail the workflow.
 
@@ -173,7 +171,7 @@ CD Workflow
 
 The CD workflow is run on push to the `main` branch for releases. It performs the following steps:
 
-1. Runs `Python Semantic Release`_ to build the changelog, create the distributions, bump the version number, and tag the release.
+1. Runs `Python Semantic Release`_ to build the changelog, convert the distributions, bump the version number, and tag the release.
 2. Merges changes in the `main` branch back into `development` to keep the branches synchronized.
 
 .. _developing-features-as-a-maintainer:
@@ -186,18 +184,17 @@ As a maintainer, when developing a new feature, you don't have to fork the proje
 Dependency and Environment Management
 -------------------------------------
 
-We manage package dependencies with `Poetry`_ and provide virtual environments via Poetry and `Conda`_. This means virtual environments must be maintained in two places. An update to one means an update to the other.
+This project uses `Poetry`_ to manage dependencies for development and distribution. Poetry keeps track of necessary packages and their versions, ensuring a consistent development environment.
 
-Please keep the project's environment and requirements files up-to-date. These are located in the project's root directory and can be updated using the following commands:
-
-For the Conda environment::
+For those who prefer using `Conda`_ for environment management, we provide environment files to define the Conda environment. This means package dependencies need to be maintained with Conda as well as Poetry. Update the Conda environment definition using the following commands::
 
     conda env export --from-history --file environment-min.yml
     conda env export --no-builds --file environment.yml
 
-For the pip requirements::
+While Poetry is the recommended method for installation, we offer users an option to install the package using `pip`_. To get a requirements.txt file listing::
 
     pip list --format=freeze > requirements.txt
 
 .. _Poetry: https://python-poetry.org/
 .. _Conda: https://conda.io/projects/conda/en/latest/
+.. _pip: https://pip.pypa.io/en/stable/
