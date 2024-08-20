@@ -30,8 +30,6 @@ Need some feedback on whether your idea is suitable for the project? Open a `Git
 Code Contributions
 ------------------
 
-Thinking about adding support for a new metadata standard?  The section titled :ref:`setting-up-a-new-metadata-conversion-strategy` provides a step-by-step guide.
-
 Steps for Submitting Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
