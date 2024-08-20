@@ -32,9 +32,9 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 sys.path.insert(0, os.path.abspath("../src/{{ cookiecutter.__package_slug }}"))
-import {{ cookiecutter.__package_slug }}
 # Get the current version of {{ cookiecutter.__package_slug }} for display in the docs
-version = {{ cookiecutter.__package_slug }}.__version__
+from importlib.metadata import version
+version = version("{{ cookiecutter.__package_slug }}")
 
 
 
