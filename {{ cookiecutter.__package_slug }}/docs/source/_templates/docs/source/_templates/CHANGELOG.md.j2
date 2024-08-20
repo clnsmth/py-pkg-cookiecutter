@@ -1,3 +1,4 @@
+{% raw %}
 # CHANGELOG
 {% if context.history.unreleased | length > 0 -%}
 {# UNRELEASED #}
@@ -21,3 +22,4 @@
 * {{ commit.commit.message.split('\n')[0] }} ([`{{ commit.commit.hexsha[:7] }}`]({{ commit.commit.hexsha | commit_hash_url }})) {% else %}
 * {{ commit.commit.message.split('\n')[0] }} ([`{{ commit.commit.hexsha[:7] }}`]({{ commit.commit.hexsha | commit_hash_url }}))
 {% endif %}{% endfor %}{% endfor %}{% endfor %}
+{% endraw %}
