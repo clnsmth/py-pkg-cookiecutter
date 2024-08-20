@@ -1,15 +1,12 @@
 import sys
-
-from pkg_resources import (
-    get_distribution,
-    packaging,
-)
+import importlib.metadata
+from packaging.version import Version
 
 MIN_CC_VERSION = "2.0.0"
 
 # assert cookiecutter >= 2.0.0
-cc_version = packaging.version.parse(get_distribution("cookiecutter").version)
-min_version = packaging.version.parse(MIN_CC_VERSION)
+cc_version = Version(importlib.metadata.version("lxml"))
+min_version = Version(MIN_CC_VERSION)
 if cc_version < min_version:
     print(
         f"ERROR: please install cookiecutter >= {MIN_CC_VERSION} (current "
