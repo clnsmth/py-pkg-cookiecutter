@@ -1,5 +1,6 @@
 """For {{ cookiecutter.__package_slug }} related operations."""
 
+
 def hello_world(message: str, emphasize: bool = False) -> str:
     """
     :param: message: str: The message to be returned.
