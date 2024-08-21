@@ -90,7 +90,7 @@ make --directory=docs/ clean html
 
 - [Importing the project to Read the Docs](https://docs.readthedocs.io/en/stable/tutorial/index.html#importing-the-project-to-read-the-docs)
 - [Checking the first build](https://docs.readthedocs.io/en/stable/tutorial/index.html#checking-the-first-build)
-- [Trigger a build from a pull request](https://docs.readthedocs.io/en/stable/tutorial/index.html#trigger-a-build-from-a-pull-request)
+- [Trigger a build from a pull request](https://docs.readthedocs.io/en/stable/tutorial/index.html#triggering-builds-from-pull-requests)
 - Link to the Read the Docs page in the repository's "About" section of GitHub.
 ## Package Logo
 
