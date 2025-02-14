@@ -3,5 +3,5 @@
 Developer Interface
 ===================
 
-.. automodule:: {{ cookiecutter.__package_slug }}.{{ cookiecutter.__package_slug }}
+.. automodule:: {{ cookiecutter.__package_slug }}
    :members:
