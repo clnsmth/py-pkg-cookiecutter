@@ -103,7 +103,14 @@ If you would like to add a logo to your package:
 
 ## PyPI
 
-If releasing on PyPI, uncomment the ~lines 25 in `sidebarintro.html` and `sidebarlogo.html`. You may need to update the links contained therein.
+Set up the CD pipeline to publish to PyPI:
+
+1. To use the `Publish to Test PyPI`  action, you’ll need to log-in to [TestPyPI](https://test.pypi.org/), create an [API token](https://pypi.org/help/#apitoken), and add the token as a secret called `TEST_PYPI_API_TOKEN` to your GitHub repository.  
+2. To use the `Publish to Production PyPI`  action, you’ll need to log-in to [PyPI](https://pypi.org/), create an API token, and add the token as a secret called `PYPI_API_TOKEN` to your GitHub repository.
+
+Update the project docs:
+
+1. If releasing on PyPI, uncomment the ~lines 25 in `sidebarintro.html` and `sidebarlogo.html`. You may need to update the links contained therein.
 
 ## Acknowledgements
 
