@@ -32,7 +32,7 @@ Add package dependencies via Poetry and Conda. We use Poetry to fulfill package 
 Add dependencies via Poetry:
 ```
 # Development dependencies (via poetry)
-poetry add --group dev pytest pytest-cov pytest-mock sphinx sphinx-autoapi myst-parser pylint black python-semantic-release
+poetry add --group dev pytest pytest-cov pytest-mock sphinx sphinx-autoapi pylint black python-semantic-release
 
 # Add operational dependencies (via poetry)
 poetry add <dependency>
